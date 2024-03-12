@@ -1,0 +1,33 @@
+package jv.is.comm;
+
+import java.io.File;
+import java.io.IOException;
+import java.util.Scanner;
+import java.io.FileWriter;
+
+public class Main {
+	
+	public static void main(String[] args) {
+		File archivo = null;
+		//aqui escribimos el archivo
+		try { 
+			archivo = new File("C:\\Users\\Santa\\OneDrive\\Escritorio\\Irene.santiago\\Irene.txt");
+			System.out.println("se ah creado el archivo correctamente");
+			//aqui llenaremos el archivo
+			if (true) {
+				FileWriter escribir = new FileWriter(archivo);
+				System.out.println("ingrese lo que guste agregar al archivo");
+				Scanner teclado = new Scanner(System.in);
+				
+				String cadena = teclado.nextLine();
+						
+				escribir.write(cadena);
+				escribir.close();
+				System.out.println("lo que ingresastes se ha agregado al archivo");
+			}
+				//aqui nos dara error	
+		} catch (IOException e) {
+			System.out.println("error");
+		}
+	}	
+		}
