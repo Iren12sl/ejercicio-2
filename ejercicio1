@@ -1,0 +1,28 @@
+package jv.ir.com;
+
+import java.io.IOException;
+import java.nio.file.DirectoryStream;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+
+public class EncontrarDirectorios {
+	public static void main(String[] args) {
+		//declaramos la ruta
+		final String directorio = "C:\\";
+		try(DirectoryStream<Path> mostrar = Files.newDirectoryStream(Paths.get(directorio))){//Creo el objeto
+			for(Path ruta : mostrar) {
+		//si es un directorio lo muestra
+				if (Files.isDirectory(ruta)) {
+				System.out.println(ruta.getFileName());
+				}
+			}
+		}
+		// si no funciona muestra el error
+		catch(IOException e) { 
+			System.out.println("Error");
+			
+		}
+	}
+
+}
