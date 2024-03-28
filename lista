@@ -1,0 +1,24 @@
+package jv.sisl.lista;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class lista {
+
+	public static void main(String[] args) {
+		// Crear una lista de cadenas
+        List<String> nombres = new ArrayList<>();
+
+        // Agregar elementos a la lista
+        nombres.add("Irene");
+        nombres.add("Julio"); 
+        nombres.add("Carlos");
+        
+        // Recorremos la lista
+        System.out.println("Elementos de la lista:");
+        for (String nombre : nombres) {
+            System.out.println(nombre);
+        }
+      
+	}
+}
