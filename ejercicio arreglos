@@ -1,0 +1,28 @@
+package jv.sisl.arreglos;
+
+import java.util.Scanner;
+
+public class ContadorVocales {
+	public static void main(String[] args) {
+	    Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese una cadena de texto: ");
+        String texto = scanner.nextLine();
+        
+        int contadorVocalesMayusculas = 0;
+        int contadorVocalesMinusculas = 0;
+        
+        for (int i = 0; i < texto.length(); i++) {
+           char c = texto.charAt(i);
+            
+            if (c == 'A' || c == 'E' || c == 'I' || c == 'O' || c == 'U') {
+                contadorVocalesMayusculas++;
+            } else if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contadorVocalesMinusculas++;
+            }
+        }
+       System.out.println("Cantidad de vocales mayúsculas: " + contadorVocalesMayusculas);
+       System.out.println("Cantidad de vocales minúsculas: " + contadorVocalesMinusculas);
+        
+        scanner.close();
+      }
+}
